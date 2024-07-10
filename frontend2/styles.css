@@ -1,0 +1,193 @@
+/* Resetting default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #222; /* Dark background */
+  color: #fff; /* White text */
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full viewport height */
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+.left, .right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.left {
+  background-color: black; /* Darker background for Nutrition Check */
+  border-right: #fff solid 1px;
+  background-image: url("/xrayscan.jpeg");
+}
+
+.left:hover {
+  background-color: #282427;
+  background-image: none;
+  transition-duration: 0.5s;
+
+}
+
+.right {
+  background-color: black; /* Dark background for Report Scan */
+  border-left: #fff solid 1px;
+  background-image: url("/nutritioncode.jpeg");
+
+}
+
+.right:hover {
+  background-color: #222;
+  background-image: none;
+  color: yellowgreen;
+  transition-duration: 1s;
+
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.sidebar {
+  position: fixed;
+  left: -160px; /* Off-screen initially */
+  top: 0;
+  bottom: 0;
+  width: 200px; /* Expanded width */
+  background-color: #111; /* Dark sidebar background */
+  z-index: 1000; /* Ensure sidebar is on top */
+  transition: left 0.3s ease; /* Smooth transition */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+.sidebar.active {
+  left: 0; /* Slides in when active */
+  background-color: black;
+  border-right: #fff, solid;
+  z-index: 10002;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Ensure ul has no margin */
+}
+.sidebar ul:hover {
+  color: aquamarine;
+}
+.sidebar li {
+  margin-bottom: 20px; /* Add space between links */
+}
+
+.sidebar a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width: 100%; /* Ensure full width */
+  padding: 10px 0; /* Add padding */
+}
+
+.sidebar a:hover {
+  background-color: black; /* Darker hover background */
+}
+
+.black-div {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  text-align: center;
+  width: 100%; /* Full width */
+}
+
+.upper {
+  position: relative; /* Relative positioning for stacking */
+  z-index: 1001; /* Ensure upper position */
+  border-bottom: #fff solid;
+  height: 80px;
+}
+
+.lower {
+  position: relative; /* Relative positioning for stacking */
+  z-index: 1001; /* Ensure upper position */
+  border-top: #fff solid;
+}
+
+.sidebar {
+  z-index: 1; /* Ensure sidebar is above lower black div */
+  background-color: transparent;
+  
+}
+.dot{
+  height: 5px;
+  width: 5px;
+  border-color: whitesmoke solid;
+  border-radius: 5%;
+}
+footer{
+color: #fff;
+}
+button{
+  background-color:transparent;
+  border: none;
+  height: 100%;
+
+
+}
+#btw{
+  color:#fff;
+  font-size: 30px;
+}
+#btw:hover{
+  color: greenyellow;
+  font-size: 25px;
+  transition-duration: 0.5s;
+}
+
+#bone{
+  color: #fff;
+  font-size: 30px;
+}
+#bone:hover{
+  color:aqua;
+  font-size: 25px;
+
+  transition-duration: 0.5s;
+
+}
+.centered:hover{
+  background-color: rgba(170, 171, 170, 0.454);
+}
+#chatbot{
+  color: aliceblue; 
+  height: 40px; 
+  width: 100px; 
+  border: 1px solid aliceblue; 
+  text-align:center;"
+}
+#chatbot:hover{
+  border-color: aqua;
+  width:200px;
+  color: aqua;
+}

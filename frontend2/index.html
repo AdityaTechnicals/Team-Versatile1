@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .centered {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px; /* Adjust the height to match the lower black div */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Upper black div with "VERSATILE.AI" centered -->
+  <div class="black-div upper">
+    <h1>Versatile.Ai</h1>
+  </div>
+
+  <!-- Main content with sidebar and containers -->
+  <div class="container">
+    <div class="left">
+      <a href="/reportscan.html">
+        <button id="bone">
+          <h1>Report <br> Scan</h1>
+        </button>
+      </a>
+    </div>
+    <div class="right">
+      <a href="/nutritioncheck.html">
+        <button id="btw">
+          <h1>Nutrition <br> Check</h1>
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Lower black div -->
+  <div class="black-div lower">
+    <!-- Content if needed -->
+    <footer>&copy; 2024 Versatile. All Rights Reserved.</footer>
+  </div>
+
+  <!-- Centered div for chatbot button -->
+  <div class="centered">
+    <a href="/aboutus.html">
+      <button id="chatbot">
+        open chatbot
+      </button>
+    </a>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <div id="dot"></div>
+      <div id="dot"></div>
+      <div id="dot"></div>
+      <li><a href="./nutritioncheck.html" id="nutrition-check">Nutrition Check</a></li>
+      <li><a href="./reportscan.html" id="report-scan">Report Scan</a></li>
+      <li><a href="./aboutus.html">About Us</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+
+    sidebar.addEventListener('mouseenter', function() {
+      this.classList.add('active');
+    });
+
+    sidebar.addEventListener('mouseleave', function() {
+      this.classList.remove('active');
+    });
+
+    // Optional: Close sidebar if user clicks outside of it
+    document.addEventListener('click', function(e) {
+      if (!sidebar.contains(e.target)) {
+        sidebar.classList.remove('active');
+      }
+    });
+
+    // Event listeners for navigation links
+    document.getElementById('nutrition-check').addEventListener('click', function() {
+      window.location.href = 'nutritioncheck.html'; // Replace with actual nutrition check page
+    });
+
+    document.getElementById('report-scan').addEventListener('click', function() {
+      window.location.href = 'scanreport.html'; // Replace with actual scan report page
+    });
+  </script>
+
+</body>
+</html>

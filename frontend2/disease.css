@@ -1,0 +1,143 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background 0.5s ease-in-out;
+  font-family: 'DM Sans', sans-serif;
+  background-color: #121212;
+}
+
+.carousel-container {
+  position: relative;
+  width: 50vw;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  display: flex;
+  opacity: 1;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(40, 40, 40, 0.8); /* Dark semi-transparent background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card-content {
+  text-align: center;
+  color: #ffffff;
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card-actions button {
+  margin: 10px;
+  padding: 15px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #1e88e5;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.card-actions button:hover {
+  background-color: #1565c0;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control.prev {
+  left: 20px;
+}
+
+.carousel-control.next {
+  right: 20px;
+}
+
+.carousel-control:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  background-color: #888;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #1e88e5;
+}
+.image-upload-form {
+    margin-top: 10px;
+  }
+  
+  .image-upload-form input[type="file"] {
+    margin-bottom: 10px;
+  }
